@@ -109,9 +109,19 @@
     // 🧠 It should work exactly the same as the getJavaScriptLoversForEach function above.
     // ❗ Notes:
     // 🧠 Solve this challenge using the filter method of the learners array.
-    const getJavaScriptLoversFilter = () => {
-
-    }
+    const getJavaScriptLoversFilter = (learners) => {
+      let result = [];
+      learners.filter(learner => {
+        if (learner.lovesJS){
+          result.push(learner)
+        }
+      })
+      if (!result.length){
+        return "no JS lovers here!"
+      }
+    return result;
+      }
+    
 
     // 👉 CHALLENGE 7
     // 🧠 The function sumOddInts takes an array of integers as its argument and returns an array with two elements.
